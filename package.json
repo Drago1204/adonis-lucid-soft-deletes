@@ -19,17 +19,17 @@
     "./provider": "./build/providers/lucid_soft_deletes_provider.js"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "clean": "del-cli build",
-    "precompile": "npm run lint && npm run clean",
+    "precompile": "pnpm run lint && pnpm run clean",
     "compile": "tsup-node && tsc --emitDeclarationOnly --declaration",
-    "build": "npm run compile",
+    "build": "pnpm run compile",
     "quick:test": "NODE_DEBUG=\"adonis-lucid-soft-deletes\" node --enable-source-maps --loader=ts-node/esm bin/test.ts",
-    "pretest": "npm run lint",
-    "test": "c8 npm run quick:test",
+    "pretest": "pnpm run lint",
+    "test": "c8 pnpm run quick:test",
     "typecheck": "tsc --noEmit",
-    "version": "npm run build",
-    "prepublishOnly": "npm run build",
+    "version": "pnpm run build",
+    "prepublishOnly": "pnpm run build",
     "release": "np"
   },
   "devDependencies": {
