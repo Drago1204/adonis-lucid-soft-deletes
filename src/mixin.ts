@@ -12,7 +12,13 @@ import type { NormalizeConstructor } from '@adonisjs/core/types/helpers'
 import type { LucidModel, ModelQueryBuilderContract } from '@adonisjs/lucid/types/model'
 import type { QueryClientContract } from '@adonisjs/lucid/types/database'
 import { Exception } from '@adonisjs/core/exceptions'
-import { column, beforeFind, beforeFetch, beforePaginate, BaseModel } from '@adonisjs/lucid/orm'
+import {
+  column,
+  beforeFind,
+  beforeFetch,
+  beforePaginate,
+  type BaseModel,
+} from '@adonisjs/lucid/orm'
 
 type ModelQueryBuilderContractWithIgnoreDeleted<
   T extends LucidModel,

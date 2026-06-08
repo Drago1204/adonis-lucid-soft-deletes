@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { DateTime } from 'luxon'
+import { type DateTime } from 'luxon'
 import { test } from '@japa/runner'
 import { column, BaseModel, manyToMany } from '@adonisjs/lucid/orm'
 import type { ManyToMany } from '@adonisjs/lucid/types/relations'
