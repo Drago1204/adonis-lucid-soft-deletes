@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@adonisjs/lucid':
-        specifier: 22.4.2
+        specifier: ^22.4.2
         version: 22.4.2(@adonisjs/assembler@8.4.0(typescript@5.9.3))(@adonisjs/core@7.3.4(@adonisjs/assembler@8.4.0(typescript@5.9.3))(youch@4.1.1))(luxon@3.7.2)(sqlite3@6.0.1)
     devDependencies:
       '@adonisjs/assembler':

@@ -1,9 +1,9 @@
 {
-  "name": "adonis-lucid-soft-deletes",
-  "description": "Addon for soft deletes AdonisJS Lucid ORM",
-  "version": "2.1.0",
+  "name": "@drago1204/adonis-lucid-soft-deletes",
+  "description": "Fork of adonis-lucid-soft-deletes - Addon for soft deletes in AdonisJS Lucid ORM compatible with AdonisJS 7",
+  "version": "3.0.0",
   "engines": {
-    "node": ">=20.6.0"
+    "node": ">=22.6.0"
   },
   "main": "./build/index.js",
   "type": "module",
@@ -24,7 +24,7 @@
     "precompile": "pnpm run lint && pnpm run clean",
     "compile": "tsup-node && tsc --emitDeclarationOnly --declaration",
     "build": "pnpm run compile",
-    "quick:test": "NODE_DEBUG=\"adonis-lucid-soft-deletes\" node --enable-source-maps --loader=ts-node/esm bin/test.ts",
+    "quick:test": "NODE_DEBUG=\"@drago1204/adonis-lucid-soft-deletes\" node --enable-source-maps --loader=ts-node/esm bin/test.ts",
     "pretest": "pnpm run lint",
     "test": "c8 pnpm run quick:test",
     "typecheck": "tsc --noEmit",
@@ -64,19 +64,34 @@
     "typescript": "5.9.3"
   },
   "peerDependencies": {
-    "@adonisjs/core": "7.3.4",
-    "@adonisjs/lucid": "22.4.2"
+    "@adonisjs/core": "^7.3.4",
+    "@adonisjs/lucid": "^22.4.2"
   },
-  "author": "LookinGit",
+  "forkOf": "https://github.com/lookinlab/adonis-lucid-soft-deletes",
+  "author": "drago1204",
   "license": "MIT",
-  "homepage": "https://github.com/lookinlab/adonis-lucid-soft-deletes#readme",
+  "homepage": "https://github.com/drago1204/adonis-lucid-soft-deletes#readme",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lookinlab/adonis-lucid-soft-deletes.git"
+    "url": "https://github.com/Drago1204/adonis-lucid-soft-deletes.git"
   },
   "bugs": {
-    "url": "https://github.com/lookinlab/adonis-lucid-soft-deletes/issues"
+    "url": "https://github.com/drago1204/adonis-lucid-soft-deletes/issues"
   },
+  "contributors": [
+    {
+      "name": "LookinGit",
+      "url": "https://github.com/lookinlab"
+    },
+    {
+      "name": "necessarylion",
+      "url": "https://github.com/necessarylion"
+    },
+    {
+      "name": "Drago1204",
+      "url": "https://github.com/Drago1204"
+    }
+  ],
   "keywords": [
     "adonisjs",
     "adonisjs-lucid",
