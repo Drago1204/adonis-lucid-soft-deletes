@@ -1,12 +1,12 @@
 # Adonis Lucid Soft Deletes
-> Works with AdonisJS v6
-
-Docs for [AdonisJS v5](https://github.com/lookinlab/adonis-lucid-soft-deletes/tree/v1)
+> Works with AdonisJS v7
 
 [![npm-image]][npm-url] [![license-image]][license-url] [![typescript-image]][typescript-url]
 
+> **Fork of [adonis-lucid-soft-deletes](https://github.com/lookinlab/adonis-lucid-soft-deletes)**
+
 This addon adds the functionality to soft deletes Lucid Models through the `deleted_at` flag
-> Works with `@adonisjs/lucid@^21.1.*`
+> Works with `@adonisjs/lucid@^22.4.2`
 
 Sometimes use the `deleted_at` flag for soft deletes could be not good way. More [about it](https://brandur.org/soft-deletion)
 
@@ -22,23 +22,23 @@ as Luxon / DateTime instance.
 
 ## Installation
 
-Install it using `npm`, `yarn` or `pnpm`.
+Install it using `pnpm` (recommended), `npm` or `yarn`.
 
 ```bash
+# pnpm (recommended)
+pnpm add @drago1204/adonis-lucid-soft-deletes
+
 # npm
-npm i adonis-lucid-soft-deletes
+npm i @drago1204/adonis-lucid-soft-deletes
 
 # yarn
-yarn add adonis-lucid-soft-deletes
-
-# pnpm
-pnpm add adonis-lucid-soft-deletes
+yarn add @drago1204/adonis-lucid-soft-deletes
 ```
 
 After install call `configure`:
 
 ```bash
-node ace configure adonis-lucid-soft-deletes
+node ace configure @drago1204/adonis-lucid-soft-deletes
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ Make sure to register the provider inside `adonisrc.ts` file.
 ```ts
 providers: [
   // ...
-  () => import('adonis-lucid-soft-deletes/provider'),
+  () => import('@drago1204/adonis-lucid-soft-deletes/provider'),
 ]
 ```
 
@@ -75,7 +75,7 @@ export default class Users extends BaseSchema {
 
 ```ts
 import { compose } from '@adonisjs/core/helpers'
-import { SoftDeletes } from 'adonis-lucid-soft-deletes'
+import { SoftDeletes } from '@drago1204/adonis-lucid-soft-deletes'
 
 export default class User extends compose(BaseModel, SoftDeletes) {
   // ...columns and props
@@ -134,7 +134,7 @@ export default class UsersController {
 
 ```ts
 import { compose } from '@adonisjs/core/helpers'
-import { SoftDeletes } from 'adonis-lucid-soft-deletes'
+import { SoftDeletes } from '@drago1204/adonis-lucid-soft-deletes'
 
 export default class User extends compose(BaseModel, SoftDeletes) {
   // ...columns and props
@@ -256,11 +256,11 @@ await User.query().withTrashed().exec()
 await User.query().onlyTrashed().restore()
 ```
 
-[npm-image]: https://img.shields.io/npm/v/adonis-lucid-soft-deletes?logo=npm&style=for-the-badge
-[npm-url]: https://www.npmjs.com/package/adonis-lucid-soft-deletes
+[npm-image]: https://img.shields.io/npm/v/@drago1204/adonis-lucid-soft-deletes?logo=npm&style=for-the-badge
+[npm-url]: https://www.npmjs.com/package/@drago1204/adonis-lucid-soft-deletes
 
-[license-image]: https://img.shields.io/npm/l/adonis-lucid-soft-deletes?style=for-the-badge&color=blueviolet
-[license-url]: https://github.com/lookinlab/adonis-lucid-soft-deletes/blob/develop/LICENSE.md
+[license-image]: https://img.shields.io/npm/l/@drago1204/adonis-lucid-soft-deletes?style=for-the-badge&color=blueviolet
+[license-url]: https://github.com/Drago1204/adonis-lucid-soft-deletes/blob/master/LICENSE.md
 
-[typescript-image]: https://img.shields.io/npm/types/adonis-lucid-soft-deletes?color=294E80&label=%20&logo=typescript&style=for-the-badge
-[typescript-url]: https://github.com/lookinlab
+[typescript-image]: https://img.shields.io/npm/types/@drago1204/adonis-lucid-soft-deletes?color=294E80&label=%20&logo=typescript&style=for-the-badge
+[typescript-url]: https://github.com/Drago1204

@@ -1,7 +1,7 @@
 {
   "name": "@drago1204/adonis-lucid-soft-deletes",
   "description": "Fork of adonis-lucid-soft-deletes - Addon for soft deletes in AdonisJS Lucid ORM compatible with AdonisJS 7",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "engines": {
     "node": ">=22.6.0"
   },
